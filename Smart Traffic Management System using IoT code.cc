@@ -1,17 +1,17 @@
-// Pin sensor Pir
+//Pin sensor Pir
 int sh = 2;
 int sv = 3;
 
-// Valores de los sensores
+//Valores de los sensores
 int valh = 0;
 int valv = 0;
 
-// Pin semaforo vertical
+//Pin semaforo vertical
 int rv = 5;
 int av = 6;
 int vv = 7;
 
-// Pin semaforo horizontal
+//Pin semaforo horizontal
 int rh = 11;
 int ah = 12;
 int vh = 13;
@@ -53,9 +53,11 @@ void loop()
   	tv2 = tv2 * 2;
   }
   
+
   semaforoHorizontal(th1, th2);
   semaforoVertical(tv1, tv2);
 }
+
 
 void semaforoHorizontal(int t1, int t2) {
   digitalWrite(rv, HIGH);
@@ -67,6 +69,7 @@ void semaforoHorizontal(int t1, int t2) {
   digitalWrite(rv, LOW);
   digitalWrite(ah, LOW);
 }
+     
 
 void semaforoVertical(int t1, int t2) {
   digitalWrite(rh, HIGH);
@@ -78,3 +81,4 @@ void semaforoVertical(int t1, int t2) {
   digitalWrite(rh, LOW);
   digitalWrite(av, LOW);
 }
+
